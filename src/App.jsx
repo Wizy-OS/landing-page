@@ -10,7 +10,7 @@ const HeroSection = () => {
         <button className="mt-6 px-6 py-3 bg-purple-500 text-white rounded">Download Now!</button>
       </div>
       <div className="md:w-1/2 mt-6 md:mt-0">
-        <img src="/screenshot.png" alt="Wiz OS Screenshot" className="rounded-lg"/>
+        <img src="/src/assets/new_b229a281e0.webp" alt="Wiz OS Screenshot" className="rounded-lg"/>
       </div>
     </section>
   );
@@ -48,7 +48,7 @@ const Screenshots = () => {
   const [currentImage, setCurrentImage] = useState(0);
   const images = [
     '/src/assets/new_b229a281e0.webp',
-    '/src/assets/Mac-desktop-screenshot-with-macOS-Ventura-wallpaper'
+    'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.howtohow.org%2Fwp-content%2Fuploads%2F2023%2F06%2FmacOS-Sonoma-Update.jpg'
   ];
 
   const nextImage = () => setCurrentImage((prev) => (prev + 1) % images.length);
