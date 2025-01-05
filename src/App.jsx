@@ -70,7 +70,7 @@ const Footer = () => {
   return (
     <footer className="bg-black text-white py-6 text-center">
       <p>Developed by John Doe and Jane Doe</p>
-      <p>All copyrights © are reserved</p>
+      <p>All copyrights &copy; are reserved</p>
     </footer>
   );
 };
