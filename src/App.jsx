@@ -7,10 +7,10 @@ const HeroSection = () => {
       <div className="md:w-1/2">
         <h1 className="text-4xl font-bold">Hero Section</h1>
         <p className="mt-4 text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, fuga.</p>
-        <button className="mt-6 px-6 py-3 bg-purple-500 text-white rounded">Download Now!</button>
+        <button className="my-purple mt-6 px-6 py-3 text-white rounded-lg">Download Now!</button>
       </div>
       <div className="md:w-1/2 mt-6 md:mt-0">
-        <img src="/screenshot.png" alt="Wiz OS Screenshot" className="rounded-lg"/>
+        <img src="/src/assets/new_b229a281e0.webp" alt="Wiz OS Screenshot" className="rounded-lg"/>
       </div>
     </section>
   );
@@ -18,7 +18,7 @@ const HeroSection = () => {
 
 const Features = () => {
   return (
-    <section className="bg-purple-500 py-10 text-white text-center">
+    <section className="my-purple py-10 text-white text-center">
       <h2 className="text-3xl font-bold mb-6">Features</h2>
       <div className="flex justify-center gap-8">
         <div className="bg-white p-6 text-black rounded-lg w-1/4">
@@ -48,7 +48,7 @@ const Screenshots = () => {
   const [currentImage, setCurrentImage] = useState(0);
   const images = [
     '/src/assets/new_b229a281e0.webp',
-    '/src/assets/Mac-desktop-screenshot-with-macOS-Ventura-wallpaper'
+    'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.howtohow.org%2Fwp-content%2Fuploads%2F2023%2F06%2FmacOS-Sonoma-Update.jpg'
   ];
 
   const nextImage = () => setCurrentImage((prev) => (prev + 1) % images.length);
@@ -70,7 +70,7 @@ const Footer = () => {
   return (
     <footer className="bg-black text-white py-6 text-center">
       <p>Developed by John Doe and Jane Doe</p>
-      <p>All copyrights © are reserved</p>
+      <p>All copyrights &copy; are reserved</p>
     </footer>
   );
 };
