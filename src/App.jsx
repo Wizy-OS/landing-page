@@ -79,7 +79,8 @@ const App = () => {
   return (
     <div className="font-sans">
       <nav className="flex justify-between items-center p-6 bg-black text-white">
-        <h1 className="text-3xl font-bold">Wiz OS</h1>
+        <h1 className="text-3xl font-extrabold">
+          Wiz OS</h1>
         <div className="flex gap-6">
           <a href="#" className="hover:underline">Home</a>
           <a href="#" className="hover:underline">Forum</a>
