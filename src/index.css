@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+    font-family: "Inter";
+}
 .my-purple {
     background: #9D4EDD;
 }
