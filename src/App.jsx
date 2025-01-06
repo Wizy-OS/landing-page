@@ -36,10 +36,10 @@ const ArrowRight = () => {
 
 const HeroSection = () => {
   return (
-    <section className="p-10 flex flex-col md:flex-row items-center">
+    <section className="p-10 flex flex-col md:flex-row items-center gap-1">
       <div className="md:w-1/2">
         <h1 className="text-4xl font-bold">Hero Section</h1>
-        <p className="mt-4 text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, fuga.</p>
+        <p className="mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, fuga.</p>
         <button className="my-purple mt-6 px-6 py-3 text-white rounded-lg">Download Now!</button>
       </div>
       <div className="md:w-1/2 mt-6 md:mt-0">
