@@ -1,5 +1,38 @@
 import React, { useState } from 'react';
 import './index.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+
+import { faCircleChevronLeft,
+        faCircleChevronRight,
+        faLock,
+        faPuzzlePiece,
+        faClockRotateLeft
+        } from '@fortawesome/free-solid-svg-icons';
+import { library } from '@fortawesome/fontawesome-svg-core';
+
+
+library.add( faCircleChevronLeft,
+  faCircleChevronRight,
+  faLock,
+  faPuzzlePiece,
+  faClockRotateLeft
+);
+
+const arrowIconsSize= "4x"
+const featureIconSize= "4x"
+
+const ArrowLeft = () => {
+  return (
+    <FontAwesomeIcon icon={faCircleChevronLeft} size={arrowIconsSize}/>
+  );
+};
+
+const ArrowRight = () => {
+  return (
+    <FontAwesomeIcon icon={faCircleChevronRight} size={arrowIconsSize}/>
+  );
+};
 
 const HeroSection = () => {
   return (
@@ -16,29 +49,22 @@ const HeroSection = () => {
   );
 };
 
+const FeatureCard = ( {faIconName, text} ) => {
+  return (
+    <div className="bg-white p-6 px-10 text-black rounded-lg">
+            <FontAwesomeIcon icon={faIconName} size={featureIconSize} />
+            <p className='mt-5'>{text}</p>
+    </div>
+  )
+}
 const Features = () => {
   return (
-    <section className="my-purple py-10 text-white text-center">
-      <h2 className="text-3xl font-bold mb-6">Features</h2>
-      <div className="flex justify-center gap-8">
-        <div className="bg-white p-6 text-black rounded-lg w-1/4">
-          <svg className="w-12 h-12 mx-auto mb-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M9.75 21a6.75 6.75 0 110-13.5A6.75 6.75 0 0119.5 9a6.75 6.75 0 01-9.75 12z"></path>
-          </svg>
-          Feature 1
-        </div>
-        <div className="bg-white p-6 text-black rounded-lg w-1/4">
-          <svg className="w-12 h-12 mx-auto mb-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6l4 2"></path>
-          </svg>
-          Feature 2
-        </div>
-        <div className="bg-white p-6 text-black rounded-lg w-1/4">
-          <svg className="w-12 h-12 mx-auto mb-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7"></path>
-          </svg>
-          Feature 3
-        </div>
+    <section className="my-purple py-2 text-white text-center">
+      <h2 className="text-3xl font-bold mb-10">Features</h2>
+      <div className="flex justify-center gap-8 mb-10">
+        <FeatureCard faIconName={faLock} text="Feature 1" />
+        <FeatureCard faIconName={faPuzzlePiece} text="Feature 2" />
+        <FeatureCard faIconName={faClockRotateLeft} text="Feature 2" />
       </div>
     </section>
   );
@@ -57,10 +83,14 @@ const Screenshots = () => {
   return (
     <section className="py-10 text-center">
       <h2 className="text-3xl font-bold mb-6">Screenshots</h2>
-      <div className="relative">
-        <button onClick={prevImage} className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-black text-white p-2">←</button>
+      <div className="relative flex">
+        <button onClick={prevImage} className="absolute left-0 top-1/2 transform -translate-y-1/2 p-2">
+          <ArrowLeft/>
+        </button>
         <img src={images[currentImage]} alt="Screenshot" className="mx-auto rounded-lg" />
-        <button onClick={nextImage} className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-black text-white p-2">→</button>
+        <button onClick={nextImage} className="absolute right-0 top-1/2 transform -translate-y-1/2 p-2">
+        <ArrowRight />
+        </button>
       </div>
     </section>
   );
